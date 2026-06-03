@@ -23,7 +23,9 @@ import {
   User,
   Users,
   MessageSquare,
-  Sparkles
+  Sparkles,
+  HelpCircle,
+  Rocket
 } from "lucide-react";
 
 export default function ContactPage() {
@@ -169,9 +171,10 @@ export default function ContactPage() {
               <div className="space-y-4 mb-8">
                 <Badge
                   variant="outline"
-                  className="rounded-full px-4 py-1.5 border-[#FFA600]/30 bg-[#FFA600]/10 text-[#FFA600] font-bold mapping-wider uppercase text-xs"
+                  className="rounded-full px-4 py-1.5 border-[#FFA600]/30 bg-[#FFA600]/10 text-[#FFA600] font-bold tracking-wider uppercase text-xs flex items-center justify-center gap-1.5"
                 >
-                  ✉️ Connect With Us
+                  <Mail className="h-3.5 w-3.5 text-[#FFA600]" />
+                  Connect With Us
                 </Badge>
                 <h1 className="text-2.5xl sm:text-4xl font-extrabold text-[#1D496C] mapping-tight leading-tight">
                   Get in Touch with VidhyaSanchalan
@@ -327,10 +330,11 @@ export default function ContactPage() {
                           id="message"
                           required
                           rows={4}
+                          cols={4}
                           placeholder="Write your requirement"
                           value={formData.message}
                           onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                          className="w-full pl-10.5 py-3 rounded-xl border border-slate-200 bg-white placeholder:text-slate-400 text-slate-800 shadow-sm focus:border-[#FFA600] focus:ring-2 focus:ring-[#FFA600]/10 transition-all text-sm font-medium"
+                          className="w-full pl-10.5 py-3 rounded-xl border border-slate-200 bg-white placeholder:text-slate-400 text-slate-800 shadow-sm focus:border-[#FFA600] focus:ring-2 focus:ring-[#FFA600]/10 transition-all text-sm resize-none font-medium"
                         />
                       </div>
                     </div>
@@ -394,9 +398,10 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <Badge
                   variant="outline"
-                  className="rounded-full px-4.5 py-1.5 border-[#429CE4]/30 bg-[#429CE4]/10 text-[#429CE4] shadow-sm font-bold mapping-wider uppercase text-xs"
+                  className="rounded-full px-4.5 py-1.5 border-[#429CE4]/30 bg-[#429CE4]/10 text-[#429CE4] shadow-sm font-bold tracking-wider uppercase text-xs flex items-center justify-center gap-1.5 w-fit"
                 >
-                  🚀 Let's Innovate Together
+                  <Rocket className="h-3.5 w-3.5 text-[#429CE4]" />
+                  Let's Innovate Together
                 </Badge>
                 <h2 className="text-3xl sm:text-4.5xl font-extrabold text-[#1D496C] mapping-tight leading-[1.12]">
                   Let’s Build a <span className="text-[#285E89]">Smarter School</span> Together
@@ -499,8 +504,9 @@ export default function ContactPage() {
         <section id="faq" className="pb-16 sm:pb-24 bg-white border-t border-slate-100 relative z-10">
           <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 pt-12 sm:pt-16">
             <div className="text-center max-w-2xl mx-auto mb-16">
-              <Badge className="rounded-lg px-4 py-2 bg-[#1D496C]/5 text-[#1D496C] border-0 mb-4 font-bold">
-                ❓ FAQs
+              <Badge className="rounded-lg px-4 py-2 bg-[#1D496C]/5 text-[#1D496C] border-0 mb-4 font-bold flex items-center justify-center gap-1.5 w-fit mx-auto">
+                <HelpCircle className="h-3.5 w-3.5 text-[#1D496C]" />
+                FAQs
               </Badge>
               <h2 className="text-3xl font-black tracking-tight sm:text-4xl mb-4 text-[#0F172A]">
                 Frequently Asked Questions

@@ -1374,87 +1374,15 @@ export default function LandingPage() {
               </div>
             )}
           </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section id="faq" className="py-16 sm:py-24 bg-white border-t border-[#1D496C]/10 relative z-10">
-          <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center max-w-2xl mx-auto mb-16">
-              <Badge className="rounded-lg px-4 py-2 bg-[#1D496C]/5 text-[#1D496C] border-0 mb-4 font-bold">
-                ❓ FAQs
-              </Badge>
-              <h2 className="text-3xl font-black mapping-tight sm:text-4xl mb-4 text-[#0F172A]">
-                Frequently Asked Questions
-              </h2>
-              <p className="text-[#475569] font-medium">
-                Find answers to common questions about the VidyaSanchalan School ERP Platform
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              {[
-                {
-                  question: "What is VidyaSanchalan and how does it benefit schools?",
-                  answer: "VidyaSanchalan is an all-in-one Smart School ERP system designed to digitize admissions, fees, timetables, examinations, progress reports, announcements, and mapping operations. It creates role-based access for Trustees, Principals, Clerks, Teachers, Students, and Parents, streamlining daily activities."
-                },
-                {
-                  question: "Can parents track their child's attendance and academic progress?",
-                  answer: "Yes! The dedicated Parent/Guardian panel provides real-time access to student attendance, homework completion, exam marks, progress mapping charts, fee dues, and direct school announcements."
-                },
-                {
-                  question: "How secure is school and student data on VidyaSanchalan?",
-                  answer: "We prioritize data privacy and security. Our system runs on ISO 27001-certified secure servers, implementing fully encrypted database logs and restricted role-based authorization to protect sensitive records."
-                },
-                {
-                  question: "Does it support offline fee collection and online gateways?",
-                  answer: "Absolutely. VidyaSanchalan supports a hybrid model allowing clerks to log offline cash/cheque fee collections as well as enabling parents to pay online securely via integrated payment gateways with immediate receipt generation."
-                },
-                {
-                  question: "How does the Geo Attendance mapping work for staff?",
-                  answer: "The Geo Attendance feature allows teachers and administration staff to mark attendance when they are physically inside designated GPS school campus coordinates, preventing proxy entries and ensuring accurate attendance mapping."
-                }
-              ].map((faq, index) => {
-                const isOpen = activeFaqIdx === index;
-                return (
-                  <div
-                    key={index}
-                    className="bg-white border border-slate-100 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden"
-                  >
-                    <button
-                      onClick={() => setActiveFaqIdx(isOpen ? null : index)}
-                      className="w-full px-6 py-5 flex items-center justify-between text-left gap-4 hover:bg-slate-50/50 transition-colors"
-                    >
-                      <span className="text-base sm:text-lg font-extrabold text-[#1D496C] transition-colors duration-300">
-                        {faq.question}
-                      </span>
-                      <span className={`w-8 h-8 rounded-full bg-[#1D496C]/5 flex items-center justify-center text-[#1D496C] shrink-0 transition-transform duration-300 ${isOpen ? "rotate-180" : ""}`}>
-                        <ChevronDown className="h-4 w-4 stroke-[2.5]" />
-                      </span>
-                    </button>
-                    <motion.div
-                      initial={false}
-                      animate={{ height: isOpen ? "auto" : 0 }}
-                      transition={{ duration: 0.3, ease: "easeInOut" }}
-                      className="overflow-hidden"
-                    >
-                      <div className="px-6 pb-6 text-sm sm:text-base font-medium text-slate-500 leading-relaxed border-t border-slate-100/50 pt-4">
-                        {faq.answer}
-                      </div>
-                    </motion.div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </section>
+          </section>
 
         {/* CTA Section */}
-        <section className="pt-6 pb-10 bg-white">
+        <section className="py-2 bg-white">
           <div className="container mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <Card className="border-0 bg-gradient-to-br from-[#1D496C] to-[#15354F] text-white shadow-2xl overflow-hidden rounded-[2.5rem] cursor-pointer">
               <div className="absolute inset-0 bg-grid-white/[0.08] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]"></div>
-              <CardContent className="p-16 text-center relative">
-                <div className="max-w-2xl mx-auto space-y-6">
+              <CardContent className="py-8 px-6 sm:py-10 sm:px-12 text-center relative">
+                <div className="max-w-2xl mx-auto space-y-4">
                   <Badge variant="outline" className="rounded-lg px-4 py-2 border-white/20 bg-white/10 text-white shadow-sm font-semibold">
                     <Rocket className="mr-2 h-3.5 w-3.5 text-[#FFA600]" />
                     Get Started Today
@@ -1465,7 +1393,7 @@ export default function LandingPage() {
                   <p className="text-slate-200/90 text-base sm:text-lg font-medium">
                     Join thousands of schools already using VidyaSanchalan to streamline their operations
                   </p>
-                  <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+                  <div className="flex flex-wrap items-center justify-center gap-4 pt-2">
                     <Button
                       size="lg"
                       className="rounded-xl bg-[#FFA600] text-white shadow-xl shadow-[#FFA600]/10 hover:shadow-2xl hover:shadow-[#FFA600]/20 hover:bg-[#ED6708] px-8 py-6 text-base font-bold transition-all duration-300 transform hover:scale-105"
@@ -1553,7 +1481,6 @@ export default function LandingPage() {
                 <ul className="space-y-3">
                   {[
                     { label: "Why Choose Us", href: "#why-choose-us" },
-                    { label: "FAQs", href: "#faq" },
                     { label: "Privacy Policy", href: "/privacy-policy" },
                     { label: "Terms of Service", href: "/terms-and-conditions" },
                     { label: "Cookie Policy", href: "#" },
